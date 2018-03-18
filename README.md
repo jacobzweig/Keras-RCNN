@@ -5,6 +5,13 @@ Some experimenting with Keras to build Recurrent Convolutional Neural Networks, 
 ```
 # Build a model
 model = BuildRCNN(nbChannels, shape1, shape2, nbClasses, nbRCL, nbFilters, filtersize)
+_where_
+...nbChannels -> number of channels
+...shape1, shape2 -> dimensions of image
+...nbClasses -> number of classes
+...nbRCL -> number of RCL block (default = 5). Defines the depth of recurrence
+...nbFilters -> number of filters
+...filtersize -> size of the filter
 
 #Compile it
 model.compile(loss = 'categorical_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
